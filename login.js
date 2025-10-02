@@ -15,9 +15,12 @@ btnLogin?.addEventListener("click", () => {
     .then(() => {
       msg.style.color = "green";
       msg.textContent = "Login realizado!";
-      window.location.href = "index.html"; // vai para gestão de projetos
+      window.location.href = "index.html"; // redireciona para gestão de projetos
     })
-    .catch(error => msg.textContent = "Erro: " + error.message);
+    .catch(error => {
+      msg.style.color = "red";
+      msg.textContent = "Erro: " + error.message;
+    });
 });
 
 // CADASTRO
@@ -30,5 +33,8 @@ btnCadastro?.addEventListener("click", () => {
       msg.style.color = "green";
       msg.textContent = "Usuário cadastrado!";
     })
-    .catch(error => msg.textContent = "Erro: " + error.message);
+    .catch(error => {
+      msg.style.color = "red";
+      msg.textContent = "Erro: " + error.message;
+    });
 });

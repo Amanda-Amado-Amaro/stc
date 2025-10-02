@@ -6,14 +6,14 @@
   <link rel="stylesheet" href="style.css" />
   <script type="module" src="login.js"></script>
 </head>
-<body>
-  <div class="container">
-    <h1>Login</h1>
-    <input type="email" id="email" placeholder="Digite seu e-mail" />
-    <input type="password" id="senha" placeholder="Digite sua senha" />
+<body class="login-body">
+  <div class="login-container">
+    <h1>Bem-vindo</h1>
+    <input type="email" id="email" placeholder="Digite seu e-mail" required />
+    <input type="password" id="senha" placeholder="Digite sua senha" required />
     <div class="buttons">
       <button id="btnLogin">Entrar</button>
-      <button id="btnCadastro">Cadastrar</button>
+      <button id="btnCadastro" class="btn-secundario">Cadastrar</button>
     </div>
     <p id="mensagem"></p>
   </div>

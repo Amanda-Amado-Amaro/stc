@@ -1,289 +1,198 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestão de Projetos</title>
-    <link rel="stylesheet" href="style.css" />
-    <style>
-      /* ======== Estilos do Cabeçalho ======== */
-      header {
-        background-color: #462282; /* Roxo escuro */
-        color: white;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestão de Projetos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-      .top-bar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 30px;
-      }
+  <header>
+    <div class="top-bar">
+  <div class="logo-text">Strategy To Chaos</div>
+  <div class="logo-img">
+    <img src="logo.png" alt="Logo do projeto">
+  </div>
+</div>
 
-      .logo {
-        font-size: 28px;
-        font-weight: bold;
-      }
-
-      .menu {
-        display: flex;
-        gap: 40px;
-      }
-
-      .menu div {
-        text-align: center;
-      }
-
-      .menu div strong {
-        display: block;
-        font-size: 14px;
-      }
-
-      .menu div span {
-        font-size: 12px;
-        color: #d1c4e9;
-      }
-
-      .bottom-bar {
-        background-color: #814ed6; /* Roxo claro */
-        padding: 10px 30px;
-        display: flex;
-        justify-content: flex-start;
-        gap: 30px;
-      }
-
-      .bottom-bar a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      .search-bar {
-        margin: 15px 30px;
-        display: flex;
-        align-items: center;
-      }
-
-      .search-bar input {
-        flex: 1;
-        padding: 10px;
-        border-radius: 10px;
-        border: none;
-        background-color: #2e1656;
-        color: white;
-      }
-
-      .btn-login {
-        margin-left: 10px;
-        background-color: #814ed6;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-weight: bold;
-        cursor: pointer;
-      }
-
-      .btn-login:hover {
-        background-color: #9c6def;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- ======== Cabeçalho ======== -->
-    <header>
-      <div class="top-bar">
-        <div class="logo">SCDE</div>
-        <div class="menu">
-          <div>
-            <strong>guias<br />completos</strong>
-            <span>finanças e mais</span>
-          </div>
-          <div>
-            <strong>ferramentas</strong>
-            <span>Compare e simule</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="bottom-bar">
-        <a href="#">CONTATO</a>
-        <a href="#">EQUIPE</a>
-        <a href="#">SOBRE</a>
-      </div>
-
-      <div class="search-bar">
-        <input type="text" placeholder="Pesquisar..." />
-        <button class="btn-login">INICIAR SESSÃO</button>
-      </div>
-    </header>
-
-    <!-- ======== Conteúdo original do seu projeto ======== -->
-    <h1>Gestão de Projetos</h1>
-
-    <!-- ================= FORMULÁRIO DE PROJETO ================= -->
-    <form id="formulario" class="form">
-      <label for="nomeProjeto">Nome do projeto:</label>
-      <input
-        type="text"
-        id="nomeProjeto"
-        placeholder="Digite o nome..."
-        required
-      />
-
-      <label for="estiloProjeto">Estilo do projeto:</label>
-      <select id="estiloProjeto" required>
-        <option value="">Selecione...</option>
-        <option value="Acadêmico">Acadêmico</option>
-        <option value="Profissional">Profissional</option>
-        <option value="Educacional">Educacional</option>
-        <option value="Saúde">Saúde</option>
-        <option value="Pessoal">Pessoal</option>
-        <option value="Esportivo">Esportivo</option>
-        <option value="Financeiro">Financeiro</option>
-      </select>
-
-      <label for="materiais">Qual material será usado?</label>
-      <textarea id="materiais" placeholder="Digite aqui..." required></textarea>
-
-      <label for="custo">Quanto custará?</label>
-      <input
-        type="text"
-        id="custo"
-        placeholder="Digite o valor..."
-        required
-      />
-
-      <label for="recursosExistentes">Que recursos já tem?</label>
-      <input
-        type="text"
-        id="recursosExistentes"
-        placeholder="Digite aqui..."
-        required
-      />
-
-      <label for="quantidadeRecursos">Quantidade de recursos?</label>
-      <input
-        type="number"
-        id="quantidadeRecursos"
-        placeholder="Digite a quantidade..."
-        required
-      />
-
-      <label for="parceiros">Parceiros?</label>
-      <input
-        type="text"
-        id="parceiros"
-        placeholder="Digite os parceiros..."
-        required
-      />
-
-      <label for="ideiaPrincipal">Ideia principal</label>
-      <input
-        type="text"
-        id="ideiaPrincipal"
-        placeholder="Digite aqui..."
-        required
-      />
-
-      <label for="prazo">Prazo do projeto</label>
-      <input
-        type="text"
-        id="prazo"
-        placeholder="Ex: 6 meses, 1 ano..."
-        required
-      />
-
-      <button type="submit">Enviar Projeto</button>
-    </form>
-
-    <!-- ================= FILTROS DE PROJETOS ================= -->
-    <h2>Filtrar Projetos</h2>
-    <div class="filtro">
-      <input
-        type="text"
-        id="filtroNome"
-        placeholder="Filtrar por nome do projeto..."
-      />
-      <select id="filtroEstilo">
-        <option value="">Filtrar por estilo...</option>
-        <option value="Acadêmico">Acadêmico</option>
-        <option value="Profissional">Profissional</option>
-        <option value="Educacional">Educacional</option>
-        <option value="Saúde">Saúde</option>
-        <option value="Pessoal">Pessoal</option>
-        <option value="Esportivo">Esportivo</option>
-        <option value="Financeiro">Financeiro</option>
-      </select>
-      <input type="date" id="filtroData" />
-      <button id="btnFiltrar">Filtrar</button>
-      <button id="btnLimpar">Limpar</button>
+    <div class="bottom-bar">
+      <a href="#inicio">PÁGINA INICIAL</a>
+      <a href="#projetos">PROJETOS CADASTRADO</a>
+      <a href="#contato">CONTATO</a>
+      <a href="#sobre">SOBRE</a>
+      <a href="#equipe">EQUIPE</a>
     </div>
 
-    <!-- ================= LISTA DE PROJETOS ================= -->
-    <h2>Projetos cadastrados</h2>
-    <ul id="lista"></ul>
+    
+  </header>
 
-    <!-- ================= CONTATOS ================= -->
-    <h2>Contatos</h2>
-    <form id="formContato" class="form">
-      <label for="nomeContato">Nome:</label>
-      <input
-        type="text"
-        id="nomeContato"
-        placeholder="Digite o nome..."
-        required
-      />
+  
+  <main>
+  
+    <section id="inicio">
+      <h1>Gestão de Projetos</h1>
+    </section>
 
-      <label for="emailContato">E-mail:</label>
-      <input
-        type="email"
-        id="emailContato"
-        placeholder="Digite o e-mail..."
-        required
-      />
+   
+    <section id="projetos">
+      <form id="formulario" class="form">
+        <label for="nomeProjeto">Nome do projeto:</label>
+        <input type="text" id="nomeProjeto" required />
 
-      <label for="telefoneContato">Telefone:</label>
-      <input
-        type="text"
-        id="telefoneContato"
-        placeholder="Digite o telefone..."
-        required
-      />
+        <label for="estiloProjeto">Estilo do projeto:</label>
+        <select id="estiloProjeto" required>
+          <option value="">Selecione...</option>
+          <option value="Acadêmico">Acadêmico</option>
+          <option value="Profissional">Profissional</option>
+          <option value="Educacional">Educacional</option>
+          <option value="Saúde">Saúde</option>
+          <option value="Pessoal">Pessoal</option>
+          <option value="Esportivo">Esportivo</option>
+          <option value="Financeiro">Financeiro</option>
+        </select>
 
-      <label for="estiloContato">Estilo do contato:</label>
-      <select id="estiloContato" required>
-        <option value="">Selecione...</option>
-        <option value="Acadêmico">Acadêmico</option>
-        <option value="Profissional">Profissional</option>
-        <option value="Educacional">Educacional</option>
-        <option value="Saúde">Saúde</option>
-        <option value="Pessoal">Pessoal</option>
-        <option value="Esportivo">Esportivo</option>
-        <option value="Financeiro">Financeiro</option>
-      </select>
+        <label for="materiais">Qual material será usado?</label>
+        <textarea id="materiais" required></textarea>
 
-      <button type="submit">Adicionar Contato</button>
-    </form>
+        <label for="custo">Quanto custará?</label>
+        <input type="text" id="custo" required />
 
-    <!-- FILTRO DE CONTATOS -->
-    <h3>Filtrar Contatos</h3>
-    <div class="filtro">
-      <select id="filtroEstiloContato">
-        <option value="">Todos os estilos</option>
-        <option value="Acadêmico">Acadêmico</option>
-        <option value="Profissional">Profissional</option>
-        <option value="Educacional">Educacional</option>
-        <option value="Saúde">Saúde</option>
-        <option value="Pessoal">Pessoal</option>
-        <option value="Esportivo">Esportivo</option>
-        <option value="Financeiro">Financeiro</option>
-      </select>
-      <button id="btnFiltrarContato">Filtrar</button>
-      <button id="btnLimparContato">Limpar</button>
+        <label for="recursosExistentes">Que recursos já tem?</label>
+        <input type="text" id="recursosExistentes" required />
+
+        <label for="quantidadeRecursos">Quantidade de recursos?</label>
+        <input type="number" id="quantidadeRecursos" required />
+
+        <label for="parceiros">Parceiros?</label>
+        <input type="text" id="parceiros" required />
+
+        <label for="ideiaPrincipal">Ideia principal</label>
+        <input type="text" id="ideiaPrincipal" required />
+
+        <label for="prazo">Prazo do projeto</label>
+        <input type="text" id="prazo" required />
+
+        <button type="submit">Enviar Projeto</button>
+      </form>
+
+      <h2>Filtrar Projetos</h2>
+      <div class="filtro">
+        <input type="text" id="filtroNome" placeholder="Filtrar por nome" />
+        <select id="filtroEstilo">
+          <option value="">Filtrar por estilo...</option>
+          <option value="Acadêmico">Acadêmico</option>
+          <option value="Profissional">Profissional</option>
+          <option value="Educacional">Educacional</option>
+          <option value="Saúde">Saúde</option>
+          <option value="Pessoal">Pessoal</option>
+          <option value="Esportivo">Esportivo</option>
+          <option value="Financeiro">Financeiro</option>
+        </select>
+        <input type="date" id="filtroData" />
+        <button id="btnFiltrar">Filtrar</button>
+        <button id="btnLimpar">Limpar</button>
+      </div>
+
+      <h2>Projetos cadastrados</h2>
+      <ul id="lista"></ul>
+    </section>
+
+   
+    <section id="contato">
+      <h2>Contatos</h2>
+      <form id="formContato" class="form">
+        <label for="nomeContato">Nome:</label>
+        <input type="text" id="nomeContato" required />
+
+        <label for="emailContato">E-mail:</label>
+        <input type="email" id="emailContato" required />
+
+        <label for="telefoneContato">Telefone:</label>
+        <input type="text" id="telefoneContato" required />
+
+        <label for="estiloContato">Estilo do contato:</label>
+        <select id="estiloContato" required>
+          <option value="">Selecione...</option>
+          <option value="Acadêmico">Acadêmico</option>
+          <option value="Profissional">Profissional</option>
+          <option value="Educacional">Educacional</option>
+          <option value="Saúde">Saúde</option>
+          <option value="Pessoal">Pessoal</option>
+          <option value="Esportivo">Esportivo</option>
+          <option value="Financeiro">Financeiro</option>
+        </select>
+
+        <button type="submit">Adicionar Contato</button>
+      </form>
+
+      <h3>Filtrar Contatos</h3>
+      <div class="filtro">
+        <select id="filtroEstiloContato">
+          <option value="">Todos os estilos</option>
+          <option value="Acadêmico">Acadêmico</option>
+          <option value="Profissional">Profissional</option>
+          <option value="Educacional">Educacional</option>
+          <option value="Saúde">Saúde</option>
+          <option value="Pessoal">Pessoal</option>
+          <option value="Esportivo">Esportivo</option>
+          <option value="Financeiro">Financeiro</option>
+        </select>
+        <button id="btnFiltrarContato">Filtrar</button>
+        <button id="btnLimparContato">Limpar</button>
+      </div>
+
+      <ul id="listaContatos"></ul>
+    </section>
+
+ 
+    <section id="sobre" class="sobre-projeto">
+      <h2>Um pouco sobre o nosso projeto</h2>
+      <div class="sobre-texto">
+        <p>
+          Nosso projeto tem como principal objetivo oferecer uma solução eficiente para a organização de projetos no setor industrial, com foco na otimização do tempo e na clareza das ideias e objetivos dos usuários. Desenvolvido por Amanda, Ivne e Willian, no curso de Cibersistemas para Automação do SENAI, o projeto resultou na criação de um site funcional, que serve como uma ferramenta prática para o planejamento e a gestão de tarefas.
+        </p>
+        <p>
+          Por meio deste site, buscamos facilitar a organização de projetos, permitindo que os usuários estruturem suas ideias, definam metas e acompanhem o progresso de maneira clara e intuitiva. A importância desta iniciativa está diretamente relacionada à crescente demanda por métodos eficientes de organização no ambiente industrial, contribuindo para o aumento da produtividade e o melhor aproveitamento do tempo.
+        </p>
+        <p>
+          Além de apoiar empresas e profissionais na gestão de seus projetos, o site também promove uma cultura de planejamento, auxiliando os usuários a alcançar seus objetivos com mais eficiência, organização e controle.
+        </p>
+      </div>
+    </section>
+
+ 
+<section id="equipe" class="equipe">
+  <h2>Equipe</h2>
+  <div class="equipe-container">
+   
+    <div class="membro">
+      <img src="img/amanda.jpg" alt="Amanda">
+      <h3>Amanda</h3>
+      <p>Aluna do instituto Senai Mecatrônica
+Curso: Cibersistemas para Automação</p>
     </div>
 
-    <ul id="listaContatos"></ul>
+    
+    <div class="membro">
+      <img src="img/ivne.jpg" alt="Ivne">
+      <h3>Ivne</h3>
+      <p>Aluna do instituto Senai Mecatrônica
+Curso: Cibersistemas para Automação</p>
+    </div>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+ 
+    <div class="membro">
+      <img src="img/willian.jpg" alt="Willian">
+      <h3>Willian</h3>
+      <p>Aluno do instituto Senai Mecatrônica
+Curso: Cibersistemas para Automação</p>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <script type="module" src="./main.js"></script>
+</body>
 </html>
