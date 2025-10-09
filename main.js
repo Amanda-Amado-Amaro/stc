@@ -189,3 +189,11 @@ btnLimparContato.addEventListener("click", () => {
   filtroEstiloContato.value = "";
   exibirContatos(Object.entries(todosContatos));
 });
+
+// ======== MENU RESPONSIVO ========
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle?.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});

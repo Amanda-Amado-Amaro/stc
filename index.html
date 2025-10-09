@@ -10,54 +10,36 @@
 
   <header>
     <div class="top-bar">
-  <div class="logo-text">Strategy To Chaos</div>
-  <div class="logo-img">
-    <img src="logo.png" alt="Logo do projeto">
-  </div>
-</div>
-
-    <div class="bottom-bar">
-      <a href="#inicio">PÁGINA INICIAL</a>
-      <a href="#projetos">PROJETOS CADASTRADO</a>
-      <a href="#contato">CONTATO</a>
-      <a href="#sobre">SOBRE</a>
-      <a href="#equipe">EQUIPE</a>
+      <div class="logo-text">Strategy To Chaos</div>
+      <div class="logo-img">
+        <img src="logo.png" alt="Logo do projeto">
+      </div>
     </div>
 
-    
+    <!-- NAVBAR RESPONSIVA -->
+    <nav class="navbar">
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <div class="nav-links" id="nav-links">
+        <a href="#inicio">PÁGINA INICIAL</a>
+        <a href="#projetos">PROJETOS CADASTRADOS</a>
+        <a href="#contato">CONTATO</a>
+        <a href="#sobre">SOBRE</a>
+        <a href="#equipe">EQUIPE</a>
+      </div>
+    </nav>
   </header>
 
-  
   <main>
-  
     <section id="inicio" class="home">
-  <div class="hero">
-    <h1>Bem-vindo ao Strategy To Chaos</h1>
-    <p>Organize seus projetos de forma clara, simples e eficiente.</p>
-    <button onclick="window.location.href='#projetos'" class="btn-principal">
-      Começar agora
-    </button>
-  </div>
-
-  <div class="beneficios">
-    <div class="card">
-      <h3>🗂️ Organização</h3>
-      <p>Cadastre e acompanhe cada detalhe dos seus projetos.</p>
-    </div>
-    <div class="card">
-      <h3>⏳ Produtividade</h3>
-      <p>Economize tempo com filtros e gestão simplificada.</p>
-    </div>
-    <div class="card">
-      <h3>📈 Progresso</h3>
-      <p>Marque como concluído e visualize seus avanços.</p>
-    </div>
-  </div>
-</section>
-
+      <div class="hero">
+        <h1>Bem-vindo ao Strategy To Chaos</h1>
+        <p>Organize seus projetos de forma clara, simples e eficiente.</p>
+        <button onclick="window.location.href='#projetos'" class="btn-principal">
+          Começar agora
+        </button>
+      </div>
     </section>
 
-   
     <section id="projetos">
       <form id="formulario" class="form">
         <label for="nomeProjeto">Nome do projeto:</label>
@@ -121,7 +103,6 @@
       <ul id="lista"></ul>
     </section>
 
-   
     <section id="contato">
       <h2>Contatos</h2>
       <form id="formContato" class="form">
@@ -168,52 +149,35 @@
       <ul id="listaContatos"></ul>
     </section>
 
- 
     <section id="sobre" class="sobre-projeto">
       <h2>Um pouco sobre o nosso projeto</h2>
       <div class="sobre-texto">
         <p>
-          Nosso projeto tem como principal objetivo oferecer uma solução eficiente para a organização de projetos no setor industrial, com foco na otimização do tempo e na clareza das ideias e objetivos dos usuários. Desenvolvido por Amanda, Ivne e Willian, no curso de Cibersistemas para Automação do SENAI, o projeto resultou na criação de um site funcional, que serve como uma ferramenta prática para o planejamento e a gestão de tarefas.
-        </p>
-        <p>
-          Por meio deste site, buscamos facilitar a organização de projetos, permitindo que os usuários estruturem suas ideias, definam metas e acompanhem o progresso de maneira clara e intuitiva. A importância desta iniciativa está diretamente relacionada à crescente demanda por métodos eficientes de organização no ambiente industrial, contribuindo para o aumento da produtividade e o melhor aproveitamento do tempo.
-        </p>
-        <p>
-          Além de apoiar empresas e profissionais na gestão de seus projetos, o site também promove uma cultura de planejamento, auxiliando os usuários a alcançar seus objetivos com mais eficiência, organização e controle.
+          Nosso projeto tem como principal objetivo oferecer uma solução eficiente para a organização de projetos...
         </p>
       </div>
     </section>
 
- 
-<section id="equipe" class="equipe">
-  <h2>Equipe</h2>
-  <div class="equipe-container">
-   
-    <div class="membro">
-      <img src="img/amanda.jpg" alt="Amanda">
-      <h3>Amanda</h3>
-      <p>Aluna do instituto Senai Mecatrônica
-Curso: Cibersistemas para Automação</p>
-    </div>
-
-    
-    <div class="membro">
-      <img src="img/ivne.jpg" alt="Ivne">
-      <h3>Ivne</h3>
-      <p>Aluna do instituto Senai Mecatrônica
-Curso: Cibersistemas para Automação</p>
-    </div>
-
- 
-    <div class="membro">
-      <img src="img/willian.jpg" alt="Willian">
-      <h3>Willian</h3>
-      <p>Aluno do instituto Senai Mecatrônica
-Curso: Cibersistemas para Automação</p>
-    </div>
-  </div>
-</section>
-
+    <section id="equipe" class="equipe">
+      <h2>Equipe</h2>
+      <div class="equipe-container">
+        <div class="membro">
+          <img src="img/amanda.jpg" alt="Amanda">
+          <h3>Amanda</h3>
+          <p>Aluna do instituto Senai Mecatrônica<br>Curso: Cibersistemas para Automação</p>
+        </div>
+        <div class="membro">
+          <img src="img/ivne.jpg" alt="Ivne">
+          <h3>Ivne</h3>
+          <p>Aluna do instituto Senai Mecatrônica<br>Curso: Cibersistemas para Automação</p>
+        </div>
+        <div class="membro">
+          <img src="img/willian.jpg" alt="Willian">
+          <h3>Willian</h3>
+          <p>Aluno do instituto Senai Mecatrônica<br>Curso: Cibersistemas para Automação</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <script type="module" src="./main.js"></script>
