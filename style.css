@@ -1,21 +1,26 @@
 /* ======== ESTILO GERAL ======== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  background: #ca97ee;
-  color: #333;
+  background-color: #ca97ee; /* cor de fundo fixa */
+  color: #000; /* letras em preto */
+  min-height: 100vh;
 }
 
 h1, h2, h3 {
   text-align: center;
   margin: 20px 0;
-  color: #222;
+  color: #000;
 }
 
 /* ======== CABEÇALHO ======== */
 header {
   background: linear-gradient(to right, #8740ab82, #814ed6);
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 
 .top-bar {
@@ -105,6 +110,7 @@ form.form {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  color: #000;
 }
 
 form label {
@@ -117,6 +123,9 @@ form input, form textarea, form select {
   border-radius: 8px;
   background: #fcf6f6;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  color: #000;
 }
 
 form button {
@@ -167,6 +176,7 @@ li {
   box-shadow: 0 3px 8px rgba(0,0,0,0.08);
   font-size: 14px;
   line-height: 1.6;
+  color: #000;
 }
 
 /* ======== LOGIN ======== */
@@ -175,7 +185,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('30feb4293e96798154337f3f13026d8c.jpg') no-repeat center center/cover;
+  background: #ca97ee url('30feb4293e96798154337f3f13026d8c.jpg') no-repeat center center/cover;
 }
 
 .login-container {
@@ -186,7 +196,7 @@ li {
   width: 90%;
   max-width: 400px;
   text-align: center;
-  color: #fff;
+  color: #000;
 }
 
 .login-container h1 {
@@ -203,6 +213,7 @@ li {
   border-radius: 8px;
   outline: none;
   font-size: 14px;
+  color: #000;
 }
 
 .login-container .buttons {
@@ -237,8 +248,8 @@ li {
 .home {
   text-align: center;
   padding: 80px 20px;
-  background: url('30feb4293e96798154337f3f13026d8c.jpg') no-repeat center center/cover;
-  color: #fff;
+  background: #ca97ee url('30feb4293e96798154337f3f13026d8c.jpg') no-repeat center center/cover;
+  color: #000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -249,14 +260,14 @@ li {
 .hero h1 {
   font-size: 36px;
   font-weight: bold;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 6px rgba(255,255,255,0.6);
 }
 
 .hero p {
   font-size: 18px;
   margin: 15px 0 25px 0;
   max-width: 600px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  text-shadow: 1px 1px 4px rgba(255,255,255,0.7);
 }
 
 .btn-principal {
@@ -286,6 +297,7 @@ li {
   border-radius: 12px;
   text-align: center;
   box-sizing: border-box;
+  color: #000;
 }
 
 .sobre-projeto h2 {
@@ -299,7 +311,7 @@ li {
   border: 2px solid #814ed6;
   padding: 15px;
   text-align: justify;
-  color: #111;
+  color: #000;
   line-height: 1.6;
   background-color: rgba(253,252,255,0.2);
   border-radius: 8px;
@@ -311,12 +323,13 @@ li {
   width: 95%;
   margin: 40px auto;
   text-align: center;
+  color: #000;
 }
 
 .equipe h2 {
   font-size: 26px;
   margin-bottom: 30px;
-  color: #222;
+  color: #000;
 }
 
 .equipe-container {
@@ -329,6 +342,7 @@ li {
 .membro {
   width: 200px;
   text-align: center;
+  color: #000;
 }
 
 .membro img {
@@ -346,12 +360,12 @@ li {
   font-size: 18px;
   font-weight: bold;
   margin: 5px 0;
-  color: #333;
+  color: #000;
 }
 
 .membro p {
   font-size: 14px;
-  color: #555;
+  color: #000;
 }
 
 /* ======== MEDIA QUERIES ======== */
@@ -385,7 +399,13 @@ li {
   }
 
   form.form {
-    padding: 15px;
+    padding: 12px;
+  }
+
+  form input,
+  form textarea,
+  form select {
+    font-size: 14px;
   }
 
   .sobre-projeto {
